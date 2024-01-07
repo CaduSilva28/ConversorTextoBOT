@@ -1,0 +1,36 @@
+#deTextSource{
+    height: 150px;
+}
+#deTextNew{
+    height: 150px;
+}
+body{
+    background-color: #778DA9;
+}
+#form-button{
+    text-align: center;
+}
+#cardHome{
+    background-color:  #F9F9F9
+}
+.btn{
+    border-radius: 10px;
+}
+#divButtonFormated{
+    margin: auto;
+}
+#buttonFormated{
+    background-color: #003459;
+    color:white;
+}
+#containerFormated{
+    max-width: 76%;
+}
+#button-clear{
+    background-color:#26A96C;
+    color:white;
+}
+#button-copy{
+    background-color: #003459;
+    color:white;
+}

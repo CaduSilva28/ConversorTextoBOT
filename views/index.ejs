@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+        <meta charset="URF-8">
+        <title>Conversor Texto</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="icon" type="image/x-icon" href="img/cowboy.png">
+    </head>
+    <body>
+        <header></header>
+        <section class="container" id="containerFormated">
+            <hr>
+            <div class="card" id="cardHome">
+                <div class="card-header">
+                    <h5>Conversor de texto</h5>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="/homeFormated" class="row">
+                        <div class="col-sm-12">
+                            <textarea class="form-control" id="deTextSource" name="deTextSource" placeholder="Insira seu texto aqui" required><%=deTextSource%></textarea>
+                            <br>
+                        </div>
+                        <div class="col-sm-2" id="divButtonFormated">
+                            <button class="btn w-100" type="submit" id="buttonFormated">Formatar texto</button>
+                            <br><br>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea class="form-control" id="deTextNew" name="deTextNew"><%=deTextNew%></textarea>
+                            <br>
+                        </div>
+                    </form>
+                    <form method="GET" action="/" id="form-button" class="row">
+                        <div class="col-sm-12">
+                            <button class="btn" id="button-clear" type="submit">Limpar</button>
+                            <button class="btn" id="button-copy"  type="button" onclick="formatText()">Copiar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script>
+        formatText = () => {
+            const input = document.querySelector('#deTextNew');
+            navigator.clipboard.writeText(input.value);
+        }
+    </script>
+</html>

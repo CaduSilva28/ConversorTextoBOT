@@ -1,0 +1,14 @@
+{
+    "apps": [
+      {
+        "name": "my-api",
+        "script": "nodemon.json",
+        "watch": ["nodemon.json"],
+        "env": {
+          "NODE_ENV": "production",
+          "TS_NODE_TRANSPILE_ONLY": "true"
+        }
+      }
+    ]
+  }
+  
