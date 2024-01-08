@@ -1,5 +1,6 @@
 import express from 'express';
-import routes from './src/routes/routes';
+import routes from './routes/routes';
+
 import bodyParser from 'body-parser';
 
 require('dotenv').config({ path:'./config/homolog.env' });
